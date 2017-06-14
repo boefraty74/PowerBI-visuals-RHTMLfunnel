@@ -1,0 +1,24 @@
+{
+  "visual": {
+     "name": "powerBI-Visuals-RHTMLfunnel",
+    "displayName": "PowerBI-visuals-RHTML_funnel",
+    "guid": "PBI_CV_9D783E0D_2610_4C22_9576_FUNNEL",
+    "visualClassName": "Visual",
+    "version": "1.0.0",
+    "description": "",
+    "supportUrl": "",
+    "gitHubUrl": ""
+  },
+  "apiVersion": "1.4.0",
+  "author": {
+    "name": "Microsoft",
+    "email": "pbicvsupport@microsoft.com"
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "externalJS": [],
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "dependencies": "dependencies.json"
+}
