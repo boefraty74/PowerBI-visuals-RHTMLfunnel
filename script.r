@@ -90,7 +90,7 @@ if(exists("settings_axes_params_scaleXformat")){
   scaleXformat = settings_axes_params_scaleXformat
 }
 
-scaleYformat = "comma"
+scaleYformat = "none"
 if(exists("settings_axes_params_scaleYformat")){
   scaleYformat = settings_axes_params_scaleYformat
 }

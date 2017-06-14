@@ -2,13 +2,13 @@
   "dataRoles": [
     {
       "displayName": "Population",
-      "description": "Numeric variable",
+      "description": "Numeric variable (positive integer)",
       "kind": "GroupingOrMeasure",
       "name": "population"
     },
     {
       "displayName": "Occurrence",
-      "description": "Numeric variable",
+      "description": "Numeric variable (nonnegative integer). Must be smaller than 'Population'",
       "kind": "GroupingOrMeasure",
       "name": "occurrence"
     },
@@ -193,7 +193,7 @@
       "properties": {
         "pointColor": {
           "displayName": "Point color",
-          "description": "Used only if `Point Color` field is empty",
+          "description": "Point color",
           "type": {
             "fill": {
               "solid": {
