@@ -1,4 +1,4 @@
-############### Utility functions ###############
+############### Flattening HTML functions ###############
 libraryRequireInstall = function(packageName, ...)
 {
   if(!require(packageName, character.only = TRUE)) 

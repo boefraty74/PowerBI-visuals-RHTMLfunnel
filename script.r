@@ -67,14 +67,14 @@ if(exists("settings_scatter_params_weight")){
 
 #PBI_PARAM Confidence level line
 #Type:numeric, Default: 0.75 , Range:[0,1], PossibleValues:NA, Remarks: GUI input is predefined set of values
-conf1 = 0.75
+conf1 = 0.95
 if(exists("settings_funnel_params_conf1")){
   conf1 = as.numeric(settings_funnel_params_conf1)
 }
 
 #PBI_PARAM Confidence level line #2
 #Type:numeric, Default: 0.95 , Range:[0,1], PossibleValues:NA, Remarks: NA
-conf2 = 0.95
+conf2 = 0.99
 if(exists("settings_funnel_params_conf2")){
   conf2 = as.numeric(settings_funnel_params_conf2)
 }
@@ -97,8 +97,8 @@ if(exists("settings_axes_params_scaleYformat")){
 
 #PBI_PARAM Size of labels on axes
 sizeLabel = 12
-if(exists("settings_axes_params_weight")){
-  sizeLabel = settings_axes_params_weight
+if(exists("settings_axes_params_textSize")){
+  sizeLabel = settings_axes_params_textSize
 }
 
 #PBI_PARAM Size of ticks on axes 
@@ -193,9 +193,9 @@ if(validToPlot && !gpd) # too small canvas
 {
   validToPlot = FALSE
   pbiWarning1 = "Visual is "
-  pbiWarning1 = cutStr2Show(pbiWarning1, strCex = sizeWarn/6, partAvailable = 0.85)
+  pbiWarning1 = cutStr2Show(pbiWarning1, strCex = sizeWarn/6, partAvailable = 0.9)
   pbiWarning2 = "too small "
-  pbiWarning2 = cutStr2Show(pbiWarning2, strCex = sizeWarn/6, partAvailable = 0.85)
+  pbiWarning2 = cutStr2Show(pbiWarning2, strCex = sizeWarn/6, partAvailable = 0.9)
   pbiWarning<-paste(pbiWarning1, "<br>", pbiWarning2, sep="")
   sizeWarn = 8 #smaller 
 }
@@ -204,7 +204,7 @@ if(validToPlot && (!exists("population") ||!exists("occurrence"))) # invalid inp
 {
   validToPlot = FALSE
   pbiWarning1 = "Both population and occurrence are required"
-  pbiWarning = cutStr2Show(pbiWarning1, strCex = sizeWarn/6, partAvailable = 0.85)
+  pbiWarning = cutStr2Show(pbiWarning1, strCex = sizeWarn/6, partAvailable = 0.9)
 }
 
 if(validToPlot)
@@ -223,9 +223,9 @@ if(validToPlot && (sum(validData) < minPoints)) # not enough data samples
 {
   validToPlot = FALSE
   pbiWarning1 = "Not enough data samples"
-  pbiWarning1 = cutStr2Show(pbiWarning1, strCex = sizeWarn/6, partAvailable = 0.85)
+  pbiWarning1 = cutStr2Show(pbiWarning1, strCex = sizeWarn/6, partAvailable = 0.9)
   pbiWarning2 = "for funnel plot"
-  pbiWarning2 = cutStr2Show(pbiWarning2, strCex = sizeWarn/6, partAvailable = 0.85)
+  pbiWarning2 = cutStr2Show(pbiWarning2, strCex = sizeWarn/6, partAvailable = 0.9)
   pbiWarning<-paste(pbiWarning1, "<br>", pbiWarning2, sep="")
 }
 
@@ -278,8 +278,8 @@ if(validToPlot)
   #tweak the limits of the y-axis
   limsY = NiceLimitsAxis(axisData = yAxis, baseline = p.fem)
   
-  xLabText = cutStr2Show( namesDS[1], strCex = sizeLabel/6, isH = TRUE, partAvailable = 0.8)
-  yLabText = cutStr2Show( paste(entryWordLabelY, namesDS[2], sep =""), strCex = sizeLabel/6, isH = FALSE, partAvailable = 0.8)
+  xLabText = cutStr2Show( namesDS[1], strCex = sizeLabel/6, isH = TRUE, partAvailable = 0.85)
+  yLabText = cutStr2Show( paste(entryWordLabelY, namesDS[2], sep =""), strCex = sizeLabel/6, isH = FALSE, partAvailable = 0.85)
   
   ## draw plot
   if(sparsify)
@@ -330,11 +330,10 @@ fp = fp + labs (title = pbiWarning, caption = NULL) + theme_bw() +
   theme(plot.title  = element_text(hjust = 0.5, size = sizeWarn), 
         axis.title=element_text(size =  sizeLabel, colour = colLabel),
         axis.text=element_text(size =  sizeTicks),
-        panel.border = element_rect())
+        panel.border = element_blank(), axis.line = element_line())
 
 if(!validToPlot) # remove box from empty plot 
-  fp = fp + 
-  theme(panel.border = element_blank())
+  fp = fp + theme(axis.line = element_blank())
 
 
 ############# Create and save widget ###############
@@ -360,6 +359,7 @@ if(validToPlot)
   p$x$data[[4]]$text = paste(as.character(conf2*100),"% limits (l)",sep ="")
   p$x$data[[5]]$text = paste(as.character(conf2*100),"% limits (u)",sep ="")
   p$x$data[[6]]$text = paste("baseline ", as.character(round(p.fem,4)), sep ="")
+  
 }
 
 internalSaveWidget(p, 'out.html')

@@ -14,7 +14,7 @@
     },
     {
       "displayName": "Tooltips",
-      "description": "Columns to be used as mouseover tooltips",
+      "description": "Fields to be used as mouseover tooltips",
       "kind": "Grouping",
       "name": "tooltips"
     }
@@ -95,6 +95,7 @@
     },
     "settings_funnel_params": {
       "displayName": " Settings",
+      "description": "Funnel plot settings",
       "properties": {
         "lineColor": {
           "displayName": "Baseline color",
@@ -189,7 +190,8 @@
       }
     },
     "settings_scatter_params": {
-      "displayName": "Scatter plot",
+      "displayName": "Scatter",
+       "description": "Scatter settings",
       "properties": {
         "pointColor": {
           "displayName": "Point color",
@@ -226,6 +228,7 @@
     },
     "settings_axes_params": {
       "displayName": "Axes",
+      "description": "Axes and labels settings",
       "properties": {
         "colLabel": {
           "displayName": "Labels color",
@@ -245,7 +248,7 @@
           }
         },
         "axisXisPercentage": {
-          "displayName": "Show percentage",
+          "displayName": "Percentage",
           "description": "Show percentage rather than ratio",
           "type": {
             "bool": true

@@ -23,7 +23,7 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-module powerbi.extensibility.visual.PBI_CV_9D783E0D_2610_4C22_9576_FUNNEL  {
+module powerbi.extensibility.visual.RHTML_FUNNEL_978302916642  {
 
     // in order to improve the performance, one can update the <head> only in the initial rendering.
     // set to 'true' if you are using different packages to create the widgets
@@ -78,8 +78,8 @@ module powerbi.extensibility.visual.PBI_CV_9D783E0D_2610_4C22_9576_FUNNEL  {
             this.settings_funnel = <VisualSettingsSplineParams>{
                
                 lineColor: "blue",
-                conf1: "0.75",
-                conf2: "0.95"
+                conf1: "0.95",
+                conf2: "0.999"
             };
             this.settings_scatter = <VisualSettingsScatterParams>{
                 pointColor: "orange",
@@ -194,8 +194,8 @@ module powerbi.extensibility.visual.PBI_CV_9D783E0D_2610_4C22_9576_FUNNEL  {
             this.settings_funnel = <VisualSettingsSplineParams>{
                             
                 lineColor: getValue<string>(objects, 'settings_funnel_params', 'lineColor', 'blue'),
-                  conf1: getValue<string>(objects, 'settings_funnel_params', 'conf1', "0.75"),
-                conf2: getValue<string>(objects, 'settings_funnel_params', 'conf2', "0.95")
+                  conf1: getValue<string>(objects, 'settings_funnel_params', 'conf1', "0.95"),
+                conf2: getValue<string>(objects, 'settings_funnel_params', 'conf2', "0.999")
             };
 
             this.settings_scatter = <VisualSettingsScatterParams>{
@@ -254,10 +254,10 @@ module powerbi.extensibility.visual.PBI_CV_9D783E0D_2610_4C22_9576_FUNNEL  {
                         properties: {
                             colLabel: this.settings_axes.colLabel,
                             textSize: this.settings_axes.textSize,
-                            scaleXformat: this.settings_axes.scaleXformat,
-                            scaleYformat: this.settings_axes.scaleYformat,
                             sizeTicks: this.settings_axes.sizeTicks,
-                            axisXisPercentage: this.settings_axes.axisXisPercentage
+                            scaleXformat: this.settings_axes.scaleXformat,
+                            axisXisPercentage: this.settings_axes.axisXisPercentage,
+                            scaleYformat: this.settings_axes.scaleYformat          
                         },
                         selector: null
                     });

@@ -1,4 +1,4 @@
-module powerbi.extensibility.visual.PBI_CV_9D783E0D_2610_4C22_9576_FUNNEL  {
+module powerbi.extensibility.visual.RHTML_FUNNEL_978302916642  {
   let injectorCounter: number = 0;
 
   export function ResetInjector() : void {

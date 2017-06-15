@@ -10,29 +10,24 @@
       "displayName": "reshape:  lets you flexibly restructure and aggregate data",
       "url": "https://cran.r-project.org/web/packages/reshape/index.html"
     },
-     {
-      "name": "mgcv",
-      "displayName": "mgvc:  Mixed GAM Computation ",
-      "url": "https://cran.r-project.org/web/packages/mgcv/index.html"
-    },
     {
       "name": "ggplot2",
-      "displayName": "GG Plot 2",
+      "displayName": "ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics",
       "url": "https://cran.r-project.org/web/packages/ggplot2/index.html"
     },
     {
-      "name": "plotly",
+      "name": "plotly: Create Interactive Web Graphics via plotly.js",
       "displayName": "Plotly",
       "url": "https://cran.r-project.org/web/packages/plotly/index.html"
     },
     {
       "name": "htmlwidgets",
-      "displayName": "HTML Widgets",
+      "displayName": "htmlwidgets: HTML Widgets for R",
       "url": "https://cran.r-project.org/web/packages/htmlwidgets/index.html"
     },
     {
       "name": "XML",
-      "displayName": "XML",
+      "displayName": "XML: Tools for Parsing and Generating XML Within R and S-Plus",
       "url": "https://cran.r-project.org/web/packages/XML/index.html"
     }
   ]
