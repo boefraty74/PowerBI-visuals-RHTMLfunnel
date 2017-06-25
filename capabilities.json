@@ -8,13 +8,13 @@
     },
     {
       "displayName": "Occurrence",
-      "description": "Numeric variable (nonnegative integer). Must be smaller than 'Population'",
+      "description": "Numeric variable (nonnegative integer). Must be smaller than Population",
       "kind": "GroupingOrMeasure",
       "name": "occurrence"
     },
     {
       "displayName": "Tooltips",
-      "description": "Fields to be used as mouseover tooltips",
+      "description": "Fields to be used as hover tooltips",
       "kind": "Grouping",
       "name": "tooltips"
     }
@@ -219,7 +219,7 @@
         },
         "sparsify": {
           "displayName": "Sparsify",
-          "description": "Sparsify dense regions of the scatter plot. Recommended for overcoming the overdraw and memory issues. ",
+          "description": "Sparsify dense regions of the scatter plot. Recommended for overcoming overdraw and memory issues. ",
           "type": {
             "bool": true
           }

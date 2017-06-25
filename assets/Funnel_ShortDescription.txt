@@ -1,1 +1,1 @@
-Find outliers in your data, using funnel plot
+Find outliers in your data, using a funnel plot.

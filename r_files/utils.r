@@ -1,5 +1,11 @@
 #utils.r file with small general functions 
 
+libraryRequireInstall = function(packageName, ...)
+{
+  if(!require(packageName, character.only = TRUE)) 
+    warning(paste("*** The package: '", packageName, "' was not installed ***", sep=""))
+}
+
 # Ecamone text string 
 # if very very long abbreviate
 # if looooooong convert to lo...
